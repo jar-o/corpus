@@ -11,13 +11,25 @@ so the agent can usually answer straight from its output, in one step:
 ```
 > corpus --find "how do Hamilton and Madison differ on keeping an army during peaceful times?"
 
-Excerpts from 3 of 86 documents, chosen by meaning (≈953 tokens; the 1 most relevant first, then 2 lower-ranked for breadth).
-Answer from these if they are enough, citing path and lines. Open a file only for what they don't cover.
+Excerpts from 3 of 86 documents, chosen by meaning (≈953 tokens; the 1 most
+relevant first, then 2 lower-ranked for breadth).
+
+Answer from these if they are enough, citing path and lines. Open a file only
+for what they don't cover.
 
 [L73-78]
 Where they differ
 Emphasis: need versus danger
-Hamilton concentrates on concrete needs in peacetime. He names garrisons on the Western frontier against Indian raids, Britain and Spain building up forces nearby, and dockyards and arsenals that need defending ( ). He openly accepts that a small professional force amounts to "a standing army in time of peace; a small one, indeed, but not the less real for being small." Madison treats a standing army as a hazard to be kept as small as possible: "A standing force, therefore, is a dangerous, at the same time that it may be a necessary, provision… On an extensive scale its consequences may be fatal" ( ). He cites Rome, whose liberties were "the final victim to her military triumphs." His aim is "diminishing both the necessity and the danger" of relying on one.
+Hamilton concentrates on concrete needs in peacetime. He names garrisons on the
+Western frontier against Indian raids, Britain and Spain building up forces
+nearby, and dockyards and arsenals that need defending ( ). He openly accepts
+that a small professional force amounts to "a standing army in time of peace; a
+small one, indeed, but not the less real for being small." Madison treats a
+standing army as a hazard to be kept as small as possible: "A standing force,
+therefore, is a dangerous, at the same time that it may be a necessary,
+provision… On an extensive scale its consequences may be fatal" ( ). He cites
+Rome, whose liberties were "the final victim to her military triumphs." His aim
+is "diminishing both the necessity and the danger" of relying on one.
 
 [L80-83]
 How much army America actually needs
