@@ -1,0 +1,8 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.corpus-out/
+tests/integration/federalist/*.txt
+tests/integration/federalist/*.jsonl
