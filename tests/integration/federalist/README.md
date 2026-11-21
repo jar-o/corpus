@@ -8,14 +8,12 @@ For example, the test prompt (see below) is specifically phrased with words that
 grep -n -i "standing arm\|time of peace\|in peace"
 ```
 
-All that to say -- we are trying to give Claude a fair advantage here. Even so, using `corpus` to front-run with old school **free** NLP locally gives you a **45.5%** cost savings for the same prompt:
+All that to say -- we are trying to give Claude a fair advantage here. Even so, using `corpus` to front-run with **free** local old school NLP gives you a **45.5%** cost savings for the same prompt:
 
 | claude | claude+corpus | savings
 |--------|---------------|--------
 | $0.3089 | $0.1684 | 45.5%
 |157,619 tokens | 52,302 tokens | 66.8%
-
-You can compare the responses below to conclude whether they are comparable.
 
 ## Test setup
 
@@ -37,7 +35,7 @@ dbgcorpus()
 
 ## Claude / Opus 5.5 
 
-This is the straight, unadorned AI run. Meaning we just use whatever tools available to find and read the files, comprehend the question, and provide a response.
+This is the straight, unadorned AI run. Meaning Claude uses use whatever tools available to find and read the files, comprehend the question, and provide a response.
 
 ```bash
 > dbgstraight "In the documents in this folder, tell me how do Hamilton and Madison differ on keeping an army during peaceful times?"
@@ -98,7 +96,7 @@ Hamilton argues that America needs peacetime forces and that the legislature sho
 
 ## Claude / Opus 5.5 / Corpus
 
-This run queries via `corpus --find` using roughly the same prompt as in the *straight* run above, rather than interrogating the text files in the folder. Note that we pass the same, natural language prompt to `corpus` as we would to Claude itself; no special search term phrasing is required.
+This run queries via `corpus --find` using roughly the same prompt as in the straight run above, rather than directly interrogating the text files in the folder. Note that we pass the same, natural language prompt to `corpus` as we would to Claude itself; no special search phrasing is required.
 
 ```bash
 > dbgcorpus "how do Hamilton and Madison differ on keeping an army during peaceful times?"
