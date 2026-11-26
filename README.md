@@ -50,7 +50,12 @@ Everything runs locally:
 No generative model is used. After the one-time model download, nothing
 leaves the machine.
 
-Read the [Federalist Papers Case Study](./tests/integration/federalist/README.md) for more details.
+Read the [Federalist Papers Case Study](./tests/integration/federalist/README.md) for more details. Here's the *tl;dr*:
+
+| claude | claude+corpus | savings
+|--------|---------------|--------
+| $0.3089 | $0.1684 | 45.5%
+|157,619 tokens | 52,302 tokens | 66.8%
 
 ## Install
 
