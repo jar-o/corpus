@@ -161,45 +161,6 @@ A rule for the bare `Bash(corpus:*)` won't match the absolute path.
    Excerpts are verbatim (whitespace collapsed), labeled with line numbers,
    and grouped by document under the document's byline (date, author).
 
-### Measured on the Federalist Papers
-
-The benchmark is 30 questions with known answer papers, in
-`tests/integration/federalist_questions.json`. It runs as a test.
-
-| | Documents returned | Expected papers found | Returned papers that are correct | Right paper first |
-|---|---|---|---|---|
-| `corpus --find` ranked documents | 2.6 per question (of 85) | 80% | 72% | 90% |
-| with excerpts (default output) | 9.2 per question, ≈4,000 tokens | 93% | | |
-
-During tuning, a pure keyword ranking (BM25 over words) put an expected
-paper first far less often: its mean reciprocal rank was 0.67, against 0.88
-for the semantic ranking.
-
-Many questions are deliberately worded without the paper's key term, as
-real questions often are.
-
-### Measured with Claude Code
-
-One question, asked with `claude -p` (Claude Opus 5.5) in the Federalist
-folder: *"How do Hamilton and Madison differ on keeping an army during
-peaceful times?"*
-
-| | Turns | Tokens | Cost |
-|---|---:|---:|---:|
-| Plain (Claude greps and reads the files) | 6 | 157,619 | $0.3089 |
-| With `corpus --find` (answered from the excerpts) | 2 | 52,302 | $0.1684 |
-| **Saving** | | **66.8%** | **45.5%** |
-
-Both answers covered both authors' papers and cited lines. The saving comes
-mostly from fewer turns, because each turn re-sends the conversation. Most
-of what remains is Claude Code's own fixed overhead (system prompt and tool
-definitions). This is one run of each; results vary from run to run.
-
-The Federalist Papers are a hard case for `corpus`. Claude already knows
-them, so without help it guesses the right search terms ("standing army")
-and the right papers. Documents Claude has never seen should show a larger
-difference.
-
 ## Output
 
 ```
